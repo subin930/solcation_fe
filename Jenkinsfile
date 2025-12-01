@@ -14,7 +14,7 @@ pipeline {
         stage('Git Clone') {
             steps {
                 echo "Cloning repository..."
-                checkout scm   // Jenkins가 자동으로 해당 브랜치 코드 가져옴
+                checkout scm
             }
         }
 
