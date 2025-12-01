@@ -17,7 +17,7 @@ const AccountSkeleton = () => {
             {/* 은행명 스켈레톤 */}
             <div className="h-4 bg-white/20 rounded w-32 mb-2"></div>
             {/* 계좌번호 스켈레톤 */}
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-6">
               <div className="h-4 bg-white/20 rounded w-40"></div>
               <div className="w-4 h-4 bg-white/20 rounded"></div>
             </div>
