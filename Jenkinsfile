@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
+                echo "Git Clone"
                 git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/subin930/solcation_fe.git'
             }
         }
