@@ -29,16 +29,16 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${IMAGE_NAME}:latest ."
+                sh "docker build -t solcation-fe:latest ."
             }
         }
 
         stage('Run Docker Container') {
             steps {
                 // 기존 컨테이너 있으면 제거
-                sh "docker rm -f ${CONTAINER_NAME} || true"
+                sh "docker rm -f solcation-fe || true"
                 // 새 컨테이너 실행 (EC2 퍼블릭 포트 80 -> 컨테이너 80)
-                sh "docker run -d -p 80:80 --name ${CONTAINER_NAME} ${IMAGE_NAME}:latest"
+                sh "docker run -d -p 80:80 --name solcation-fe solcation-fe:latest"
             }
         }
     }
