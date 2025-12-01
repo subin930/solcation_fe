@@ -3,20 +3,18 @@ pipeline {
 
     stages {
         stage('Test') {
-          steps {
-            echo "Hello from Jenkins"
-            sh 'node -v'
-            sh 'npm -v'
-            sh 'docker -v'
-          }
+            steps {
+                echo "Hello from Jenkins"
+                sh 'node -v'
+                sh 'npm -v'
+                sh 'docker -v'
+            }
         }
-    }
 
-
-    stages {
         stage('Git Clone') {
             steps {
-                echo "Git Clone"
+                echo "Cloning repository..."
+                checkout scm   // Jenkins가 자동으로 해당 브랜치 코드 가져옴
             }
         }
 
