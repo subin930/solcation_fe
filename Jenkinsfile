@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                checkout scm
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/subin930/solcation_fe.git'
             }
         }
 
