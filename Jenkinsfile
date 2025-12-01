@@ -2,6 +2,18 @@ pipeline {
     agent any
 
     stages {
+        stage('Test') {
+          steps {
+            echo "Hello from Jenkins"
+            sh 'node -v'
+            sh 'npm -v'
+            sh 'docker -v'
+          }
+        }
+    }
+
+
+    stages {
         stage('Git Clone') {
             steps {
                 echo "Git Clone"
